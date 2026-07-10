@@ -37,8 +37,8 @@ app.use(session({
         maxAge:1000*60*60*24*7
     },//7days
    store: MongoStore.create({
-    mongoUrl: process.env.MONGO_URI,  // ← hardcoded URL hatao, .env se lo
-    dbName: "express-data",           // ← same dbName jo connectDB mein hai
+    mongoUrl: process.env.MONGO_URI,  
+    dbName: "express-data",           
     collectionName: 'sessions'
 })
 }))

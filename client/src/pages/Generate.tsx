@@ -149,18 +149,18 @@ const Generate = () => {
                             <div className={`space-y-6 transition-opacity duration-300 ${
                                 step !== "input" ? "opacity-50 pointer-events-none" : ""
                             }`}>
-                                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 shadow-xl space-y-8">
-                                    <h2 className="text-xl font-bold text-zinc-100">Create Your Comic</h2>
-                                    <div className="space-y-4">
+                               <div className="p-6 rounded-2xl bg-white/5 border border-white/10 shadow-xl space-y-8 h-128.75">
+                                    <h2 className="text-xl font-bold text-zinc-100 mb-15">Create Your Comic</h2>
+                                   <div className="space-y-4 mb-8">
                                         <label className="text-sm text-zinc-400">Title or Topic:</label>
                                         <input
                                             type="text"
                                             value={title}
                                             onChange={(e) => setTitle(e.target.value)}
-                                            className="w-full px-4 py-3 rounded-lg bg-black/20 border border-white/10 text-white placeholder:text-zinc-600 focus:outline-none focus:border-purple-500 transition-colors"
+                                            className="w-full  mt-2 mb-6 px-4 py-3 rounded-lg bg-black/20 border border-white/10 text-white placeholder:text-zinc-600 focus:outline-none focus:border-purple-500 transition-colors"
                                             placeholder="e.g., Photosynthesis"
                                         />
-                                        <div className="grid grid-cols-2 gap-2">
+                                        <div className="grid grid-cols-2 gap-3">
                                             {genres.map((genre) => (
                                                 <button
                                                     key={genre}
@@ -179,7 +179,7 @@ const Generate = () => {
                                     <button
                                         onClick={handleGenerateText}
                                         disabled={textLoading || !title}
-                                        className="w-full py-4 rounded-xl bg-purple-600 hover:bg-purple-700 disabled:opacity-50 font-bold text-white transition-all flex items-center justify-center gap-2"
+                                        className="w-full mt-15 py-4 rounded-xl bg-purple-600 hover:bg-purple-700 disabled:opacity-50 font-bold text-white transition-all flex items-center justify-center gap-2"
                                     >
                                         {textLoading ? (
                                             <>
@@ -199,7 +199,7 @@ const Generate = () => {
                             {/* RIGHT: Preview */}
                             <div className="space-y-6">
                                 {textLoading ? (
-                                    <div className="h-96 flex items-center justify-center bg-white/5 rounded-2xl border border-dashed border-white/20">
+                                    <div className="h-128.75 flex items-center justify-center bg-white/5 rounded-2xl border border-dashed border-white/20">
                                         <div className="text-center space-y-4">
                                             <div className="animate-spin size-8 border-4 border-purple-500 border-t-transparent rounded-full mx-auto" />
                                             <p className="text-zinc-400">Crafting your story...</p>

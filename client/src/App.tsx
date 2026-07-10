@@ -9,6 +9,8 @@ import MyGeneration from "./pages/MyGeneration";
 import Login from "./components/Login";
 import Contact from "./pages/Contact";
 import ProtectedRoute from "./components/ProtectedRoute";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsOfService from "./components/TermsOfService";
 import { useEffect } from "react";
 
 export default function App() {
@@ -35,6 +37,12 @@ export default function App() {
                 } />
                 <Route path="/my-generation" element={
                     <ProtectedRoute><MyGeneration /></ProtectedRoute>
+                } />
+                 <Route path="/privacy" element={
+                    <ProtectedRoute><PrivacyPolicy /></ProtectedRoute>
+                } />
+                <Route path="/terms" element={
+                    <ProtectedRoute><TermsOfService /></ProtectedRoute>
                 } />
             </Routes>
             <Footer />

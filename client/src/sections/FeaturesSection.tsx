@@ -5,17 +5,17 @@ import { motion } from "motion/react";
 
 const featuresData = [
     {
-        icon: "/assets/zap-icon.svg",
+        icon: "assets/zap-icon.svg",
         title: "AI Storytelling",
         description: "Topic-to-Comic AI : Enter any topic to instantly generate a full script and custom images in your favorite genre from Superhero , Sci-Fi , Fantasy to Thriller.",
     },
     {
-        icon: "/assets/thumb-icon.svg",
+        icon: "assets/thumb-icon.svg",
         title: "Active Recall",
         description: "Flashcards & Quizzes : Reinforce your learning with AI-generated Flashcards and a dynamic 5-question quiz tailored specifically to your chosen topic.",
     },
     {
-        icon: "/assets/shape-icon.svg",
+        icon: "assets/shape-icon.svg",
         title: "Performance Insights",
         description: "Score & Feedback : Get instant results with a detailed Performance Score and personalized AI feedback to help you master every concept.",
     },
@@ -45,7 +45,7 @@ export default function FeaturesSection() {
                     <div className="flex flex-wrap items-center justify-center gap-6 md:gap-4 mt-16 px-6 ">
                         {featuresData.map((feature, index) => (
                             <div key={index} className={`${index === 1 ? 'p-px rounded-[13px] bg-linear-to-br ' : ''}`}>
-                                <div className="p-6 rounded-xl space-y-4  border border-slate-800 bg-slate-950 max-w-80 w-full">
+                                <div className="p-6 rounded-xl space-y-4  border border-slate-800 bg-slate-950 max-w-80 w-full min-h-70 h-full">
                                     
                                     <img src={feature.icon} alt={feature.title} />
                                     <h3 className="text-base font-medium text-white">
@@ -72,16 +72,16 @@ export default function FeaturesSection() {
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 mt-8 gap-10">
                             <div className="md:col-span-2">
-                                <img className="h-full w-auto" src="/assets/features-showcase-1.png" alt="features showcase" width={1000} height={500} />
+                                <img className="h-full w-auto" src="assets/feature_image.jpg" alt="features showcase 4" width={1000} height={500} />
                             </div>
                             <div className="md:col-span-1"
                             >
                                 <h3 className="text-[24px]/7.5 text-slate-300 font-medium mt-6">Boost your knowledge with comic based AI comics </h3>
                                 <p className="text-slate-300 mt-2">Stop getting confused . Our AI creates comic proven to capture attention</p>
-                                <a href="https://prebuiltui.com" className="group flex items-center gap-2 mt-4 text-purple-600 hover:text-purple-700 transition">
+                                {/* <a href="https://prebuiltui.com" className="group flex items-center gap-2 mt-4 text-purple-600 hover:text-purple-700 transition">
                                     Start Generating Free
                                     <ArrowUpRight className="size-5 group-hover:translate-x-0.5 transition duration-300" />
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                     </div>
